@@ -3,6 +3,7 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import cross_val_score, train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import ( mean_squared_error, mean_absolute_error, root_mean_squared_error )
+from xgboost import XGBRegressor
 
 # Load the dataset
 train_df= pd.read_csv('data/train.csv')
@@ -57,10 +58,13 @@ print(x.head())
 
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=42)
 
-model = model = RandomForestRegressor(
+model = XGBRegressor(
     n_estimators=100,
+    learning_rate=0.1,
+    max_depth=4,
     random_state=42
 )
+
 
 model.fit(x_train, y_train)
 
