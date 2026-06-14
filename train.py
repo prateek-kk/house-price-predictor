@@ -93,3 +93,15 @@ scores = -cross_val_score(
 
 print(scores)
 print(scores.mean())
+
+importance = pd.DataFrame({
+    "Feature": x.columns,
+    "Importance": model.feature_importances_
+})
+
+importance = importance.sort_values(
+    "Importance",
+    ascending=False
+)
+
+print(importance.head(15))
