@@ -101,7 +101,6 @@ Best Model: XGBoost
 
 * Hyperparameter tuning
 * Feature engineering
-* XGBoost implementation
 * Model deployment using Flask or Streamlit
 * Real-time prediction interface
 
