@@ -97,6 +97,13 @@ XGBoost Regressor
 
 Best Model: XGBoost
 
+
+## Best Features
+- OverallQual
+- GarageCars
+- FullBath
+- GrLivArea
+
 ## Future Improvements
 
 * Hyperparameter tuning
