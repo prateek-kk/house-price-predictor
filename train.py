@@ -94,6 +94,8 @@ scores = -cross_val_score(
 print(scores)
 print(scores.mean())
 
+# feature importance
+
 importance = pd.DataFrame({
     "Feature": x.columns,
     "Importance": model.feature_importances_
