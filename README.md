@@ -82,13 +82,32 @@ Lower MAE indicates better predictive performance.
 
 ## Results
 
-Random Forest Regression generally provided better predictions than Linear Regression by capturing complex relationships in the housing data.
+Model Comparison
+
+Linear Regression
+- MAE: 18,409
+
+Random Forest Regressor
+- MAE: 17,528
+- 5-Fold CV MAE: 17,638
+
+XGBoost Regressor
+- MAE: 16,032
+- 5-Fold CV MAE: 15,983
+
+Best Model: XGBoost
+
+
+## Best Features
+- OverallQual
+- GarageCars
+- FullBath
+- GrLivArea
 
 ## Future Improvements
 
 * Hyperparameter tuning
 * Feature engineering
-* XGBoost implementation
 * Model deployment using Flask or Streamlit
 * Real-time prediction interface
 
